@@ -87,4 +87,9 @@ set_prompt () {
 precmd() {
   title "zsh" "%m" "%55<...<%~"
   set_prompt
+  print -Pn "\e]2; %~/ \a"
+}
+
+preexec() {
+  print -Pn "\e]2; %~/ \a"
 }
